@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>new branch</title>
+<style>
+  body { font-family: sans-serif; padding: 20px; }
+  input { width: 60px; }
+</style>
+</head>
+<body>
+  <p>X+Y+Z=Result</p>
+  <p>
+    X: <input type="number" id="x" value="0">
+    Y: <input type="number" id="y" value="0">
+    Z: <input type="number" id="z" value="0">
+    Result: <span id="result">0</span>
+  </p>
+  <script>
+    const x = document.getElementById('x');
+    const y = document.getElementById('y');
+    const z = document.getElementById('z');
+    const result = document.getElementById('result');
+    function updateResult() {
+      const sum = Number(x.value) + Number(y.value) + Number(z.value);
+      result.textContent = sum;
+    }
+    x.addEventListener('input', updateResult);
+    y.addEventListener('input', updateResult);
+    z.addEventListener('input', updateResult);
+  </script>
+</body>
+</html>
